@@ -1,0 +1,15 @@
+---
+
+- hosts: all
+  become: true 
+  tasks:
+  - name: install apache2
+    apt:
+      name: apache2
+      state: present
+      update_cache: yes
+  - name: install telnet server
+    apt: 
+      name: telnetd
+      state: present
+      
